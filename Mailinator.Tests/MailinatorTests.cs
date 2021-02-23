@@ -17,13 +17,13 @@ namespace Mailinator.Tests
         public void private_inbox_Click_Email_Link()
         {         
             //Login to mailinator and open private inbox  
-            Driver.Current.Url = "https://www.mailinator.com/v4/private/inboxes.jsp?to=beth";
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");
             
             Pages.Pages.Home.clickLoginButton(Driver.Current);
             
             Pages.Pages.Login.Login(username, password);
             //Go to private inbox
-            Driver.Current.Url = "https://www.mailinator.com/v4/private/inboxes.jsp?to=beth";
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");
             
             var wait = new WebDriverWait(Driver.Current, TimeSpan.FromSeconds(10));
       
@@ -59,11 +59,11 @@ namespace Mailinator.Tests
         public void public_inbox_switch_to_and_from_mailinator_tab()
         {         
             //go to public inbox
-            Driver.Current.Url = ("https://www.mailinator.com/v4/public/inboxes.jsp?to=beth123");
+            Driver.Goto("https://www.mailinator.com/v4/public/inboxes.jsp?to=beth123");
             //switch to new tab
             Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //open new URL
-            Driver.Current.Url = ("https://testproject.io/platform/");
+            Driver.Goto("https://testproject.io/platform/");
             //go back to first tab
             Driver.Current.SwitchTo().Window(Driver.Current.WindowHandles[0]);
             //open email
@@ -93,7 +93,7 @@ namespace Mailinator.Tests
             //set wait
             var wait = new WebDriverWait(Driver.Current, TimeSpan.FromSeconds(10));
             //go to sign in
-            Driver.Current.Url = ("https://timelesstales.in/");
+            Driver.Goto("https://timelesstales.in/");
             Pages.Pages.WordPress.ScrollToBottom(Driver.Current);
             Pages.Pages.WordPress.ClickRegister(Driver.Current);
             //click sign in button         
@@ -101,7 +101,7 @@ namespace Mailinator.Tests
              //switch to new tab
             Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //go to public Mailinator inbox
-            Driver.Current.Url = ("https://www.mailinator.com/v4/public/inboxes.jsp?to=" + Email);
+            Driver.Goto("https://www.mailinator.com/v4/public/inboxes.jsp?to=" + Email);
             //open email
             wait.Until(driver => Pages.Pages.Inbox.Map.emailWP.Displayed);
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailWP);
@@ -150,19 +150,19 @@ namespace Mailinator.Tests
             string EmailPrefix = generateUniquePrivateMailinatorEmailPrefix(Driver.Current);
             string Password = generateUniquePassword(Driver.Current);
             //go to sign in
-            Driver.Current.Url = "https://timelesstales.in/wp-login.php?action=register";
+            Driver.Goto("https://timelesstales.in/wp-login.php?action=register");
             //click sign in button
             Pages.Pages.Register.CreateAccount(Username, EmailPrefix);
             //switch to new tab
             Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //go to inbox
-            Driver.Current.Url = "https://www.mailinator.com/";   
+            Driver.Goto("https://www.mailinator.com/");   
             Pages.Pages.Home.clickLoginButton(Driver.Current);
             Pages.Pages.Login.Login(username, password);  
             //go to Mailinator
-            Driver.Current.Url = ("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix);   
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix);   
              //open email
-            Driver.Current.Url = ("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix); 
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix); 
        ////    wait.Until(Driver.Current => Pages.Pages.Inbox.Map.emailWP.Displayed);
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailWP);
              //Now switch to the email body iframe  
