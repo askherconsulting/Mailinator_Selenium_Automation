@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using Framework.Selenium;
 using Config.Base;
 using OpenQA.Selenium.Chrome;
-
+using Mailinator.Pages;
 
 namespace Tests.Base
 {
@@ -24,6 +24,7 @@ namespace Tests.Base
         
             FW.SetLogger();
             Driver.Init();
+            Pages.Init();
             Driver.Current.Manage().Window.Maximize();
         }
 
