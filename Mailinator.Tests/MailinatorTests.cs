@@ -19,15 +19,14 @@ namespace Mailinator.Tests
         public void private_inbox_Click_Email_Link()
         {         
             //Login to mailinator and open private inbox  
-            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth123");
             Pages.Pages.Home.clickLoginButton();
             Pages.Pages.Login.Login(username, password);
             //Go to private inbox
-            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");     
-            Pages.Pages.Inbox.selectInbox("beth");
-            //give the email time to land in the inbox
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth123");     
+            Pages.Pages.Inbox.selectInbox("beth");           
+            // Click on the email - check why the wait inside this method isn't picked up
             Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
-            // Click on the email
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
             
             // Now switch to the email body iframe

@@ -1,5 +1,6 @@
 ﻿using Framework.Selenium;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace Mailinator.Pages
 {
