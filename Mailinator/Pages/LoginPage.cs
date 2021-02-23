@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using Framework;
+using Framework.Selenium;
 
 namespace Mailinator.Pages
 {
@@ -9,9 +10,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly LoginPageMap Map;
 
-        public LoginPage(IWebDriver driver) : base(driver)
+        public LoginPage()
         {
-            Map = new LoginPageMap(driver);
+            Map = new LoginPageMap();
         }
 
         public LoginPage Login(string username, string password)
@@ -28,18 +29,12 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class LoginPageMap
     {
-        IWebDriver _driver;
+        public IWebElement Email => Driver.FindElement(By.Id("many_login_email"));
 
-        public LoginPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-        public IWebElement Email => _driver.FindElement(By.Id("many_login_email"));
+        public IWebElement Password => Driver.FindElement(By.Id("many_login_password"));
 
-        public IWebElement Password => _driver.FindElement(By.Id("many_login_password"));
-
-        public IWebElement LoginButton => _driver.FindElement(By.XPath("//*[contains(@aria-label,'Login link')]"));
+        public IWebElement LoginButton => Driver.FindElement(By.XPath("//*[contains(@aria-label,'Login link')]"));
         
-        public IWebElement LoginPageTitle => _driver.FindElement(By.XPath("//*[h1]//*[contains(text(), 'Please enter your login details.')]"));
+        public IWebElement LoginPageTitle => Driver.FindElement(By.XPath("//*[h1]//*[contains(text(), 'Please enter your login details.')]"));
     }
 }

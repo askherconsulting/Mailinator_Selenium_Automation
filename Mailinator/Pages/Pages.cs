@@ -48,19 +48,19 @@ namespace Mailinator.Pages {
 
         public static void Init()
         {
-            Header = new HeaderNav(Driver.Current);
-            CreateAccount = new CreateAccountPage(Driver.Current);
-            Home = new HomePage(Driver.Current);
-            Inbox = new InboxPage(Driver.Current);
-            Links = new LinksPage(Driver.Current);
-            Login = new LoginPage(Driver.Current);
-            Message = new MessagePage(Driver.Current);
-            Password = new PasswordPage(Driver.Current);
-            Register = new RegisterPage(Driver.Current);
-            ResetPassword = new ResetPasswordPage(Driver.Current);
-            Text = new TextPage(Driver.Current);
-            WordPressAdmin = new WordPressAdminPage(Driver.Current);
-            WordPress = new WordPressPage(Driver.Current);
+            Header = new HeaderNav();
+            CreateAccount = new CreateAccountPage();
+            Home = new HomePage();
+            Inbox = new InboxPage();
+            Links = new LinksPage();
+            Login = new LoginPage();
+            Message = new MessagePage();
+            Password = new PasswordPage();
+            Register = new RegisterPage();
+            ResetPassword = new ResetPasswordPage();
+            Text = new TextPage();
+            WordPressAdmin = new WordPressAdminPage();
+            WordPress = new WordPressPage();
         }
 
 

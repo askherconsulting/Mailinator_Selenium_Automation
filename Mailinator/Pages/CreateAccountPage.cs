@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 
@@ -10,9 +11,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly CreateAccountPageMap Map;
 
-        public CreateAccountPage(IWebDriver driver) : base(driver)
+        public CreateAccountPage()
         {
-            Map = new CreateAccountPageMap(driver);
+            Map = new CreateAccountPageMap();
         }
 
         public CreateAccountPage CreateAccount(string FirstName, string LastName, string Email, string Password)
@@ -37,23 +38,16 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class CreateAccountPageMap
     {
-        IWebDriver _driver;
-
-        public CreateAccountPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-
         
-        public IWebElement FirstName => _driver.FindElement(By.Id("first-name-su"));
+        public IWebElement FirstName => Driver.FindElement(By.Id("first-name-su"));
 
-        public IWebElement LastName => _driver.FindElement(By.Id("last-name-su"));
+        public IWebElement LastName => Driver.FindElement(By.Id("last-name-su"));
 
-         public IWebElement Email => _driver.FindElement(By.Id("email-su"));
+         public IWebElement Email => Driver.FindElement(By.Id("email-su"));
 
-         public IWebElement Password => _driver.FindElement(By.Id("password-su"));
+         public IWebElement Password => Driver.FindElement(By.Id("password-su"));
 
-         public IWebElement CreateAccountButton => _driver.FindElements(By.XPath("//button[contains(text(),'Create account')]"))[1];
+         public IWebElement CreateAccountButton => Driver.FindElements(By.XPath("//button[contains(text(),'Create account')]"))[1];
 
     }
 }

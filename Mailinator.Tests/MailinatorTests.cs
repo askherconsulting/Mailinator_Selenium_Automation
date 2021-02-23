@@ -19,7 +19,7 @@ namespace Mailinator.Tests
             //Login to mailinator and open private inbox  
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");
             
-            Pages.Pages.Home.clickLoginButton(Driver.Current);
+            Pages.Pages.Home.clickLoginButton();
             
             Pages.Pages.Login.Login(username, password);
             //Go to private inbox
@@ -157,7 +157,7 @@ namespace Mailinator.Tests
             Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //go to inbox
             Driver.Goto("https://www.mailinator.com/");   
-            Pages.Pages.Home.clickLoginButton(Driver.Current);
+            Pages.Pages.Home.clickLoginButton();
             Pages.Pages.Login.Login(username, password);  
             //go to Mailinator
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix);   

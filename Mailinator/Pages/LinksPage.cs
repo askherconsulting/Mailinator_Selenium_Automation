@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Selenium;
+using OpenQA.Selenium;
 
 namespace Mailinator.Pages
 {
@@ -8,9 +9,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly LinksPageMap Map;
 
-        public LinksPage(IWebDriver driver) : base(driver)
+        public LinksPage()
         {
-            Map = new LinksPageMap(driver);
+            Map = new LinksPageMap();
         }
 
         public LinksPage viewLinks(IWebDriver driver)
@@ -23,16 +24,10 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class LinksPageMap
     {
-        IWebDriver _driver;
 
-        public LinksPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
+        public IWebElement email => Driver.FindElement(By.XPath("//*[contains(text(),subject)]"));
 
-        public IWebElement email => _driver.FindElement(By.XPath("//*[contains(text(),subject)]"));
-
-        public IWebElement links => _driver.FindElement(By.Id("clicklinks"));
+        public IWebElement links => Driver.FindElement(By.Id("clicklinks"));
 
     }
 }

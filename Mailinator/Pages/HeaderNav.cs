@@ -7,9 +7,9 @@ namespace Mailinator.Pages
     {
         public readonly HeaderNavMap Map;
 
-        public HeaderNav(IWebDriver driver)
+        public HeaderNav()
         {
-            Map = new HeaderNavMap(driver);
+            Map = new HeaderNavMap();
         }
 
     }
@@ -17,12 +17,6 @@ namespace Mailinator.Pages
 
     public class HeaderNavMap
     {
-        IWebDriver _driver;
-
-        public HeaderNavMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
 
  
     }

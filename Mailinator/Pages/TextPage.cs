@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Selenium;
+using OpenQA.Selenium;
 
 namespace Mailinator.Pages
 {
@@ -8,9 +9,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly TextPageMap Map;
 
-        public TextPage(IWebDriver driver) : base(driver)
+        public TextPage()
         {
-            Map = new TextPageMap(driver);
+            Map = new TextPageMap();
         }
 
         //note raised issue that text link cannot be navigated to with Mailinator directly
@@ -24,14 +25,8 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class TextPageMap
     {
-        IWebDriver _driver;
 
-        public TextPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-
-        public IWebElement Text => _driver.FindElement(By.XPath("//*[contains(text(),linkText)]"));
+        public IWebElement Text => Driver.FindElement(By.XPath("//*[contains(text(),linkText)]"));
 
     }
 }
