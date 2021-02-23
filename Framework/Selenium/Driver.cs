@@ -11,11 +11,15 @@ namespace Framework.Selenium
     public static class Driver
     {
         [ThreadStatic]
+        public static Wait Wait;
+
+        [ThreadStatic]
         public static IWebDriver _driver;
 
         public static void Init()
         {
             _driver = new ChromeDriver(FW.WORKSPACE_DIRECTORY + "_drivers");
+            Wait = new Wait(10);
         }
 
         public static void Goto(string url)
