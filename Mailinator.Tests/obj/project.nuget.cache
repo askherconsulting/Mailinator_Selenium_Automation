@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "UDAO6qec+XP6ufFitq4X2HtUvDxvRoa1fbN+swJuDa1sVKyH06VV1m0iGO9jhc1tsLfls6+DfYZqgGl7tXB46A==",
+  "dgSpecHash": "Xc89BDA+pRydDqWEm5HjKL+/1Qofdz3FWlYtZWHrCuJdwYuV0LPBjppigOwcNEI4SPrz0lrbCsad+t0Y+o3mtQ==",
   "success": true,
   "projectFilePath": "C:\\Mailinator_Selenium_Automation\\Mailinator.Tests\\Mailinator.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\appium.webdriver\\4.2.1\\appium.webdriver.4.2.1.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\castle.core\\4.3.1\\castle.core.4.3.1.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\dotnetseleniumextras.pageobjects\\3.11.0\\dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
+    "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\microsoft.dotnet.internalabstractions\\1.0.0\\microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\microsoft.extensions.configuration\\2.2.0\\microsoft.extensions.configuration.2.2.0.nupkg.sha512",

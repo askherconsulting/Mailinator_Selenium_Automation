@@ -1,3 +1,4 @@
+using System.Data;
 using System.Security.Cryptography;
 using System;
 using NUnit.Framework;
@@ -6,6 +7,7 @@ using Mailinator.Pages;
 using OpenQA.Selenium.Support.UI;
 using Tests.Base;
 using Framework.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace Mailinator.Tests
 {
@@ -18,19 +20,14 @@ namespace Mailinator.Tests
         {         
             //Login to mailinator and open private inbox  
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");
-            
             Pages.Pages.Home.clickLoginButton();
-            
             Pages.Pages.Login.Login(username, password);
             //Go to private inbox
-            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");
-            
+            Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth");     
             var wait = new WebDriverWait(Driver.Current, TimeSpan.FromSeconds(10));
-      
             Pages.Pages.Inbox.selectInbox("beth");
             //give the email time to land in the inbox
-       ////     wait.Until(Driver.Current, => Pages.Pages.Inbox.Map.emailSW.Displayed);
-
+            wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
             // Click on the email
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
             
@@ -38,19 +35,19 @@ namespace Mailinator.Tests
              //note - the frame will either be html_msg_body or texthtml_msg_body 
              //so use this try catch block to try both
              try {
-             Driver.Current.SwitchTo().Frame("html_msg_body");}
-        ////     wait.Until(Driver.Current => messagePage.Map.viewEventButton.Displayed);}
+             Driver.Current.SwitchTo().Frame("html_msg_body");
+             wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);}
              catch (WebDriverException ) {
                  Driver.Current.SwitchTo().DefaultContent();
                  Driver.Current.SwitchTo().Frame("texthtml_msg_body");
-       ////          wait.Until(Driver.Current => messagePage.Map.viewEventButton.Displayed);
+                 wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);
              }
             // Click on the email link 
             Pages.Pages.Message.clickViewEvent(Driver.Current);
             // If you need to go back to the menu, don't forget to switch back:
             Driver.Current.SwitchTo().DefaultContent();
             //check a new tab has been opened
-       ////     wait.Until(driver => Driver.Current.WindowHandles.Count == 2);
+            wait.Until(drvr => Driver.Current.WindowHandles.Count == 2);
             Assert.AreEqual(2, Driver.Current.WindowHandles.Count);
         }
 

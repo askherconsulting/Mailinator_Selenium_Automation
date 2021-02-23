@@ -31,6 +31,7 @@ namespace Framework.Selenium
 
         public static IWebElement FindElement(By by)
             {
+
                 return Current.FindElement(by);
             }
 

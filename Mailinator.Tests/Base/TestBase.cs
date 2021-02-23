@@ -46,7 +46,7 @@ namespace Tests.Base
                 FW.Log.Warning("Outcome: " + outcome);
             }
 
-            Driver.Current.Quit();
+            Driver.Quit();
         }
     }
 }

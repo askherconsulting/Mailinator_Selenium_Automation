@@ -260,3 +260,4 @@ c:\Mailinator_Selenium_Automation\Mailinator.Tests\obj\Debug\netcoreapp3.1\Maili
 c:\Mailinator_Selenium_Automation\Mailinator.Tests\obj\Debug\netcoreapp3.1\Mailinator.Tests.dll
 c:\Mailinator_Selenium_Automation\Mailinator.Tests\obj\Debug\netcoreapp3.1\Mailinator.Tests.pdb
 c:\Mailinator_Selenium_Automation\Mailinator.Tests\obj\Debug\netcoreapp3.1\Mailinator.Tests.genruntimeconfig.cache
+C:\Mailinator_Selenium_Automation\Mailinator.Tests\bin\Debug\netcoreapp3.1\SeleniumExtras.WaitHelpers.dll
