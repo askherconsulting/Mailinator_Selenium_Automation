@@ -2,6 +2,7 @@ using Framework;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
+using Framework.Selenium;
 using Config.Base;
 using OpenQA.Selenium.Chrome;
 
@@ -18,15 +19,12 @@ namespace Tests.Base
             FW.CreateTestResultsDirectory();
         }
 
-        public IWebDriver driver;
-
         [SetUp]
-        public virtual void BeforeEach()
-        {
-
+        public virtual void BeforeEach(){
+        
             FW.SetLogger();
-            driver = new ChromeDriver(FW.WORKSPACE_DIRECTORY + "_drivers");
-            driver.Manage().Window.Maximize();
+            Driver.Init();
+            Driver.Current.Manage().Window.Maximize();
         }
 
         [TearDown]
@@ -47,7 +45,7 @@ namespace Tests.Base
                 FW.Log.Warning("Outcome: " + outcome);
             }
 
-            driver.Quit();
+            Driver.Current.Quit();
         }
     }
 }
