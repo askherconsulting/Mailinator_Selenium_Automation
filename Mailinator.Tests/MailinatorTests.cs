@@ -27,6 +27,7 @@ namespace Mailinator.Tests
             Pages.Pages.Inbox.selectInbox("beth");           
             // Click on the email - check why the wait inside this method isn't picked up
             Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
+        //    Driver.Wait.Until(WaitConditions.ElementDisplayed(Pages.Pages.Inbox.Map.emailSW));
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
             
             // Now switch to the email body iframe
