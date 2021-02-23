@@ -10,3 +10,15 @@ C:\C#_Selenium_Automation_Mailinator\Mailinator\obj\Debug\netstandard2.0\Mailina
 C:\C#_Selenium_Automation_Mailinator\Mailinator\obj\Debug\netstandard2.0\Mailinator.csproj.CopyComplete
 C:\C#_Selenium_Automation_Mailinator\Mailinator\obj\Debug\netstandard2.0\Mailinator.dll
 C:\C#_Selenium_Automation_Mailinator\Mailinator\obj\Debug\netstandard2.0\Mailinator.pdb
+c:\Mailinator_Selenium_Automation\Mailinator\bin\Debug\netstandard2.0\Mailinator.deps.json
+c:\Mailinator_Selenium_Automation\Mailinator\bin\Debug\netstandard2.0\Mailinator.dll
+c:\Mailinator_Selenium_Automation\Mailinator\bin\Debug\netstandard2.0\Mailinator.pdb
+c:\Mailinator_Selenium_Automation\Mailinator\bin\Debug\netstandard2.0\Framework.dll
+c:\Mailinator_Selenium_Automation\Mailinator\bin\Debug\netstandard2.0\Framework.pdb
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.csprojAssemblyReference.cache
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.AssemblyInfoInputs.cache
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.AssemblyInfo.cs
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.csproj.CoreCompileInputs.cache
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.csproj.CopyComplete
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.dll
+c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.pdb

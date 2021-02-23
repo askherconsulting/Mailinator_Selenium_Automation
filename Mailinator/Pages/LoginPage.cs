@@ -38,7 +38,7 @@ namespace Mailinator.Pages
 
         public IWebElement Password => _driver.FindElement(By.Id("many_login_password"));
 
-        public IWebElement LoginButton => _driver.FindElement(By.XPath("//*[contains(text(),'Log in')]"));
+        public IWebElement LoginButton => _driver.FindElement(By.XPath("//*[contains(@aria-label,'Login link')]"));
         
         public IWebElement LoginPageTitle => _driver.FindElement(By.XPath("//*[h1]//*[contains(text(), 'Please enter your login details.')]"));
     }
