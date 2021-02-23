@@ -7355,11 +7355,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator.Tests\\Mailinator.Tests.csproj",
+      "projectUniqueName": "C:\\Mailinator_Selenium_Automation\\Mailinator.Tests\\Mailinator.Tests.csproj",
       "projectName": "Mailinator.Tests",
-      "projectPath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator.Tests\\Mailinator.Tests.csproj",
+      "projectPath": "C:\\Mailinator_Selenium_Automation\\Mailinator.Tests\\Mailinator.Tests.csproj",
       "packagesPath": "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\",
-      "outputPath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator.Tests\\obj\\",
+      "outputPath": "C:\\Mailinator_Selenium_Automation\\Mailinator.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\elizabeth.marshall\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7375,8 +7375,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\Mailinator.csproj": {
-              "projectPath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\Mailinator.csproj"
+            "C:\\Mailinator_Selenium_Automation\\Mailinator\\Mailinator.csproj": {
+              "projectPath": "C:\\Mailinator_Selenium_Automation\\Mailinator\\Mailinator.csproj"
             }
           }
         }

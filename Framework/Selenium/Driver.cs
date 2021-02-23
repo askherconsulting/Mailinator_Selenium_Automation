@@ -39,6 +39,11 @@ namespace Framework.Selenium
                 return Current.FindElements(by);
             }
 
+         public static void Quit()
+        {
+            Current.Quit();
+        }
+
 
         public static IWebDriver Current => _driver ?? throw new NullReferenceException("_driver is null");
     }

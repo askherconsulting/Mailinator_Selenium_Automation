@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cn8f+5maveeU4AQy5eaUXzSPk5DJoCg+32WSqDPWq/tzhM3E4UkjC4zyIJgmOryBmRFmnZHNojfwjWaaId7w0w==",
+  "dgSpecHash": "YYGtsDkxKPrLqYFfFC+xrj6WbqUtGqrSt0senYeV1PCcai0JMmpS2YSGGAgvoR5vj9Pyp/nn0zqwhLDgipdc1g==",
   "success": true,
-  "projectFilePath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\Mailinator.csproj",
+  "projectFilePath": "C:\\Mailinator_Selenium_Automation\\Mailinator\\Mailinator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

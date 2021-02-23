@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fp7oLggKzA+TAYNewP3RnY6ubRtV5LD0fBiN0jv9s7yMqThdSJ+e6wWc7voOQhOsk3UclXqafhYcI9dsreCV3w==",
+  "dgSpecHash": "UDAO6qec+XP6ufFitq4X2HtUvDxvRoa1fbN+swJuDa1sVKyH06VV1m0iGO9jhc1tsLfls6+DfYZqgGl7tXB46A==",
   "success": true,
-  "projectFilePath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator.Tests\\Mailinator.Tests.csproj",
+  "projectFilePath": "C:\\Mailinator_Selenium_Automation\\Mailinator.Tests\\Mailinator.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\appium.webdriver\\4.2.1\\appium.webdriver.4.2.1.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\castle.core\\4.3.1\\castle.core.4.3.1.nupkg.sha512",
