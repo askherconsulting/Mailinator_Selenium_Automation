@@ -1,3 +1,4 @@
+using System.Linq;
 using Framework;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
