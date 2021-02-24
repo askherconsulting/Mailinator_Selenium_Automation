@@ -16,19 +16,19 @@ namespace Mailinator.Pages
         }
 
         public InboxPage openEmail(IWebElement email)
-       {
-           Driver.Wait.Until(WaitConditions.ElementDisplayed(email));
-           email.Click();
-           return this;
-       }
+        {
+            Driver.Wait.Until(WaitConditions.ElementDisplayed(email));
+            email.Click();
+            return this;
+        }
 
-         public InboxPage selectInbox(string inboxName)
-       {
-           Map.inboxName.Clear();
-           Map.inboxName.SendKeys(inboxName);
-           Map.inboxName.SendKeys(Keys.Enter);
-           return this;
-       }
+        public InboxPage selectInbox(string inboxName)
+        {
+            Map.inboxName.Clear();
+            Map.inboxName.SendKeys(inboxName);
+            Map.inboxName.SendKeys(Keys.Enter);
+            return this;
+        }
     }
 
     //this class maps all the elements you need on this page

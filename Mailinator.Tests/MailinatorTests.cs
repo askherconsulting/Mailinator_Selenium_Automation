@@ -7,7 +7,6 @@ using Mailinator;
 using OpenQA.Selenium.Support.UI;
 using Tests.Base;
 using Framework.Selenium;
-using SeleniumExtras.WaitHelpers;
 
 namespace Mailinator.Tests
 {
@@ -25,13 +24,12 @@ namespace Mailinator.Tests
             //Go to private inbox
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth123");     
             Pages.Pages.Inbox.selectInbox("beth");           
-            // Click on the email - check why the wait inside this method isn't picked up
             Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
             // Now switch to the email body iframe
              //note - the frame will either be html_msg_body or texthtml_msg_body 
              //so use this try catch block to try both
-            try {
+            try {                                                                                                                    
                 Driver.Current.SwitchTo().Frame("html_msg_body");
                 Driver.Wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);}
             catch (WebDriverException ) {

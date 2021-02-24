@@ -13,5 +13,23 @@ namespace Framework.Selenium
             }
             return condition;
         }
+    
+
+        public static Func<IWebDriver, bool> ElementNotDisplayed(IWebElement element)
+        {
+            bool condition(IWebDriver driver)
+            {
+                try
+                {
+                    return !element.Displayed;
+                }
+
+                catch (StaleElementReferenceException)
+                {
+                    return true;
+                }
+            }
+            return condition;
+        }
     }
 }
