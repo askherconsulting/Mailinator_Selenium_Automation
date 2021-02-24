@@ -28,18 +28,17 @@ namespace Mailinator.Tests
             // Click on the email - check why the wait inside this method isn't picked up
             Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
-            
             // Now switch to the email body iframe
              //note - the frame will either be html_msg_body or texthtml_msg_body 
              //so use this try catch block to try both
-             try {
-             Driver.Current.SwitchTo().Frame("html_msg_body");
-             Driver.Wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);}
-             catch (WebDriverException ) {
-                 Driver.Current.SwitchTo().DefaultContent();
-                 Driver.Current.SwitchTo().Frame("texthtml_msg_body");
-                 Driver.Wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);
-             }
+            try {
+                Driver.Current.SwitchTo().Frame("html_msg_body");
+                Driver.Wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);}
+            catch (WebDriverException ) {
+                Driver.Current.SwitchTo().DefaultContent();
+                Driver.Current.SwitchTo().Frame("texthtml_msg_body");
+                Driver.Wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);
+                }
             // Click on the email link 
             Pages.Pages.Message.clickViewEvent(Driver.Current);
             // If you need to go back to the menu, don't forget to switch back:
@@ -125,12 +124,6 @@ namespace Mailinator.Tests
             String title = Driver.Current.Title;
             Assert.AreEqual(title, "Dashboard ‹ My Blog — WordPress");
         }
-
-
-
-
-
-        
 
         [Test, Category("e2e")]
         public void e2e_private_mailbox_signup_test()

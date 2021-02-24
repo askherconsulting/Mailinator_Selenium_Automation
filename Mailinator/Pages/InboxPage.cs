@@ -17,7 +17,7 @@ namespace Mailinator.Pages
 
         public InboxPage openEmail(IWebElement email)
        {
-           Driver.Wait.Until(WaitConditions.ElementDisplayed(Map.emailSW));
+           Driver.Wait.Until(WaitConditions.ElementDisplayed(email));
            email.Click();
            return this;
        }
