@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using Mailinator.Pages;
+using Mailinator;
 using OpenQA.Selenium.Support.UI;
 using Tests.Base;
 using Framework.Selenium;
@@ -27,7 +27,6 @@ namespace Mailinator.Tests
             Pages.Pages.Inbox.selectInbox("beth");           
             // Click on the email - check why the wait inside this method isn't picked up
             Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
-        //    Driver.Wait.Until(WaitConditions.ElementDisplayed(Pages.Pages.Inbox.Map.emailSW));
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
             
             // Now switch to the email body iframe
@@ -63,31 +62,28 @@ namespace Mailinator.Tests
             //go back to first tab
             Driver.Current.SwitchTo().Window(Driver.Current.WindowHandles[0]);
             //open email
-      ////      var wait = new WebDriver.CurrentWait(Driver.Current, TimeSpan.FromSeconds(10));
-      ////      wait.Until(Driver.Current => inboxPage.Map.emailSW.Displayed);
+            Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailSW.Displayed);
             // Click on the email
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailSW);
             // Now switch to the email body iframe:
             Driver.Current.SwitchTo().Frame("html_msg_body");
-      ////      wait.Until(Driver.Current => messagePage.Map.viewEventButton.Displayed);
+            Driver.Wait.Until(drvr => Pages.Pages.Message.Map.viewEventButton.Displayed);
             // Click on the email link 
             Pages.Pages.Message.clickViewEvent(Driver.Current);
             // If you need to go back to the menu, don't forget to switch back:
             Driver.Current.SwitchTo().DefaultContent();
             //check a new tab has been opened
-      ////      wait.Until(Driver.Current => Driver.Current.WindowHandles.Count == 3);
+            Driver.Wait.Until(drvr => Driver.Current.WindowHandles.Count == 3);
             Assert.AreEqual(3, Driver.Current.WindowHandles.Count);
         }
 
         [Test, Category("e2e")]
         public void e2e_public_mailbox_signup_test()
-        {   //pre-requisites - generate pages
+        {   
             //generate random Mailinator Email address
             string Username = generateUniqueUsername(Driver.Current);
             string Email = generateUniquePublicMailinatorEmail(Driver.Current);
             string Password = generateUniquePassword(Driver.Current);
-            //set wait
-            var wait = new WebDriverWait(Driver.Current, TimeSpan.FromSeconds(10));
             //go to sign in
             Driver.Goto("https://timelesstales.in/");
             Pages.Pages.WordPress.ScrollToBottom(Driver.Current);
@@ -99,18 +95,18 @@ namespace Mailinator.Tests
             //go to public Mailinator inbox
             Driver.Goto("https://www.mailinator.com/v4/public/inboxes.jsp?to=" + Email);
             //open email
-            wait.Until(driver => Pages.Pages.Inbox.Map.emailWP.Displayed);
+            Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailWP.Displayed);
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailWP);
             //Now switch to the email body iframe and move back afterwards                
             //note - the frame will either be html_msg_body or texthtml_msg_body 
             //so use this try catch block to try both
             try {
-            Driver.Current.SwitchTo().Frame("texthtml_msg_body");}
-    ////        wait.Until(Driver.Current => messagePage.Map.textLink.Displayed);}
+            Driver.Current.SwitchTo().Frame("texthtml_msg_body");
+            Driver.Wait.Until(drvr => Pages.Pages.Message.Map.textLink.Displayed);}
             catch (WebDriverException ) {
                 Driver.Current.SwitchTo().DefaultContent();
                 Driver.Current.SwitchTo().Frame("html_msg_body");
-    ////            wait.Until(Driver.Current => Pages.Pages.Message.Map.textLink.Displayed);
+                Driver.Wait.Until(drvr => Pages.Pages.Message.Map.textLink.Displayed);
             }
             //Click on the email link 
             Pages.Pages.Message.clickTextLink(Driver.Current);
@@ -118,7 +114,7 @@ namespace Mailinator.Tests
              //switch back to window from iframe
             Driver.Current.SwitchTo().Window(Driver.Current.WindowHandles[2]);
             //wait for auto-generated password to appear
-    ////        wait.Until(Driver.Current => Pages.Pages.Password.Map.passStrengthResult.Displayed);
+            Driver.Wait.Until(drvr => Pages.Pages.Password.Map.passStrengthResult.Displayed);
             //clear field and enter password
             Pages.Pages.Password.enterPassword(Password);
             Pages.Pages.Password.clickResetPasswordButton(Driver.Current);
@@ -139,8 +135,6 @@ namespace Mailinator.Tests
         [Test, Category("e2e")]
         public void e2e_private_mailbox_signup_test()
         {         
-            //generate explicit wait condition
-            var wait = new WebDriverWait(Driver.Current, TimeSpan.FromSeconds(10));
             //generate random Mailinator Email address
             string Username = generateUniqueUsername(Driver.Current);
             string EmailPrefix = generateUniquePrivateMailinatorEmailPrefix(Driver.Current);
@@ -159,26 +153,26 @@ namespace Mailinator.Tests
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix);   
              //open email
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=" + EmailPrefix); 
-       ////    wait.Until(Driver.Current => Pages.Pages.Inbox.Map.emailWP.Displayed);
+            Driver.Wait.Until(drvr => Pages.Pages.Inbox.Map.emailWP.Displayed);
             Pages.Pages.Inbox.openEmail(Pages.Pages.Inbox.Map.emailWP);
              //Now switch to the email body iframe  
              // AND REMEMBER TO SWITCH BACK AFTERWARDS          
              //Note - the frame will either be html_msg_body or texthtml_msg_body 
              //so use this try catch block to try both
             try {
-            Driver.Current.SwitchTo().Frame("texthtml_msg_body");}
-     ////       wait.Until(Driver.Current => Pages.Pages.Message.Map.textLink.Displayed);}
+            Driver.Current.SwitchTo().Frame("texthtml_msg_body");
+            Driver.Wait.Until(drvr => Pages.Pages.Message.Map.textLink.Displayed);}
             catch (WebDriverException ) {
                 Driver.Current.SwitchTo().DefaultContent();
                 Driver.Current.SwitchTo().Frame("html_msg_body");
-      ////          wait.Until(Driver.Current => Pages.Pages.Message.Map.textLink.Displayed);
+                Driver.Wait.Until(drvr => Pages.Pages.Message.Map.textLink.Displayed);
             }
             //Click on the email link 
             Pages.Pages.Message.clickTextLink(Driver.Current);
             //switch back to window from iframe
             Driver.Current.SwitchTo().Window(Driver.Current.WindowHandles[2]);
             //wait for auto-generated password to appear
-      ////      wait.Until(Driver.Current => Pages.Pages.Password.Map.passStrengthResult.Displayed);
+            Driver.Wait.Until(drvr => Pages.Pages.Password.Map.passStrengthResult.Displayed);
             //clear field and enter password
             Pages.Pages.Password.enterPassword(Password);
             Pages.Pages.Password.clickResetPasswordButton(Driver.Current);
