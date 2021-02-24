@@ -1,11 +1,10 @@
-using System.Threading;
-using System.Runtime.Versioning;
 using System;
 using Framework.Selenium;
 
-namespace Mailinator.Pages {
+namespace Mailinator.Pages 
+{
 
-    public class Pages
+    public class GetPages
     {
         [ThreadStatic]
         public static HeaderNav Header;

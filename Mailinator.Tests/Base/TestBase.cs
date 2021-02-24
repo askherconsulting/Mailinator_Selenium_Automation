@@ -25,7 +25,7 @@ namespace Tests.Base
         
             FW.SetLogger();
             Driver.Init();
-            Pages.Init();
+            GetPages.Init();
             Driver.Current.Manage().Window.Maximize();
         }
 
