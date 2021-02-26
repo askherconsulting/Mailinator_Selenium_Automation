@@ -1,6 +1,6 @@
 # C-_Selenium_Automation_Mailinator
 
-This code repo was built from Carlos Kidman's excellent Test Automation University course on C# Selenium Automation.  it does not have all of the features described in that project (yet!).
+This code repo was built from Carlos Kidman's excellent Test Automation University course on C# Selenium Automation.  Due to time constrains, it does not have all of the features described in that project (yet!).
 
 https://testautomationu.applitools.com/test-automation-framework-csharp/ 
 
