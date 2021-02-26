@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Linq;
 using Framework;
 using NUnit.Framework;

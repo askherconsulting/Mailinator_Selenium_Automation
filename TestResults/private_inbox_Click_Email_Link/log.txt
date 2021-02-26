@@ -1,4 +1,0 @@
-Starting timestamp: 24/02/2021 12:19:14
-Test: private_inbox_Click_Email_Link
-    [STEP]: Logging in
-[INFO]: Outcome: Failed

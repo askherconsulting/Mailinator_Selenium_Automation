@@ -1,4 +1,6 @@
-﻿using Framework.Selenium;
+﻿using System.Threading;
+using System.ComponentModel.Design;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Mailinator.Pages
@@ -28,6 +30,7 @@ namespace Mailinator.Pages
            Map.Username.SendKeys(Email);
            Map.Password.SendKeys(Password);
            Map.Button.Click();
+           Thread.Sleep(2000);
            return this;
        }
 

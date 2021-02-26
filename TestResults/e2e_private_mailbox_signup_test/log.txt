@@ -1,0 +1,4 @@
+Starting timestamp: 25/02/2021 11:16:37
+Test: e2e_private_mailbox_signup_test
+    [STEP]: Logging in
+[INFO]: Outcome: Passed

@@ -131,6 +131,12 @@ namespace Mailinator.Tests
             string EmailPrefix = generateUniquePrivateMailinatorEmailPrefix(Driver.Current);
             string Password = generateUniquePassword(Driver.Current);
             //go to sign in
+            Driver.Goto("https://timelesstales.in/");
+            Pages.GetPages.WordPress.ScrollToBottom(Driver.Current);
+            Pages.GetPages.WordPress.ClickRegister(Driver.Current);
+            //click sign in button         
+            Pages.GetPages.Register.CreateAccount(Username, EmailPrefix);   
+            //go to sign in
             Driver.Goto("https://timelesstales.in/wp-login.php?action=register");
             //click sign in button
             Pages.GetPages.Register.CreateAccount(Username, EmailPrefix);
@@ -159,7 +165,6 @@ namespace Mailinator.Tests
                 Driver.Wait.Until(drvr => Pages.GetPages.Message.Map.textLink.Displayed);
             }
             //Click on the email link 
-            
             Pages.GetPages.Message.clickTextLink(Driver.Current);
             //switch back to window from iframe
             Driver.Current.SwitchTo().Window(Driver.Current.WindowHandles[2]);
