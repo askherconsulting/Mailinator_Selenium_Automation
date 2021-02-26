@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Selenium;
+using OpenQA.Selenium;
 
 namespace Mailinator.Pages
 {
@@ -8,9 +9,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly ResetPasswordPageMap Map;
 
-        public ResetPasswordPage(IWebDriver driver) : base(driver)
+        public ResetPasswordPage()
         {
-            Map = new ResetPasswordPageMap(driver);
+            Map = new ResetPasswordPageMap();
         }
 
         public ResetPasswordPage clickLogin(IWebDriver driver)
@@ -24,16 +25,10 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class ResetPasswordPageMap
     {
-        IWebDriver _driver;
 
-        public ResetPasswordPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
+        public IWebElement passwordField => Driver.FindElement(By.Id("pass1"));
 
-        public IWebElement passwordField => _driver.FindElement(By.Id("pass1"));
-
-        public IWebElement loginLink => _driver.FindElement(By.XPath("//*[contains(text(), 'Log in')]"));
+        public IWebElement loginLink => Driver.FindElement(By.XPath("//*[contains(text(), 'Log in')]"));
 
 
     }

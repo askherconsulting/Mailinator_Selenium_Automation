@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Cn8f+5maveeU4AQy5eaUXzSPk5DJoCg+32WSqDPWq/tzhM3E4UkjC4zyIJgmOryBmRFmnZHNojfwjWaaId7w0w==",
+  "dgSpecHash": "y1V2gqJKFNaMI/x4LQ8vnigqFbiFEXnT8awpr978cACaAL166yyZYVq4aXF1AHg4cptelMcEd3JAvcxNqlOfVw==",
   "success": true,
-  "projectFilePath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\Mailinator.csproj",
+  "projectFilePath": "C:\\Mailinator_Selenium_Automation\\Mailinator\\Mailinator.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",

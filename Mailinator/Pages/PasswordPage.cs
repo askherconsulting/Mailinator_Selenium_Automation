@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Selenium;
+using OpenQA.Selenium;
 
 namespace Mailinator.Pages
 {
@@ -8,9 +9,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly PasswordPageMap Map;
 
-        public PasswordPage(IWebDriver driver) : base(driver)
+        public PasswordPage()
         {
-            Map = new PasswordPageMap(driver);
+            Map = new PasswordPageMap();
         }
 
         public PasswordPage enterPassword(string password)
@@ -32,18 +33,12 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class PasswordPageMap
     {
-        IWebDriver _driver;
 
-        public PasswordPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
+        public IWebElement passwordField => Driver.FindElement(By.XPath("//*[@id='pass1']"));
 
-        public IWebElement passwordField => _driver.FindElement(By.XPath("//*[@id='pass1']"));
+        public IWebElement button => Driver.FindElement(By.Id("wp-submit"));
 
-        public IWebElement button => _driver.FindElement(By.Id("wp-submit"));
-
-        public IWebElement passStrengthResult => _driver.FindElement(By.XPath("//*[@id='pass-strength-result'][text()='Strong']"));
+        public IWebElement passStrengthResult => Driver.FindElement(By.XPath("//*[@id='pass-strength-result'][text()='Strong']"));
 
 
     }

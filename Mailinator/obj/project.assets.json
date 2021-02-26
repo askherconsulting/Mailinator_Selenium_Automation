@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.10.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -78,6 +90,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "NUnit": "3.12.0",
           "Selenium.Support": "4.0.0-alpha05",
           "Selenium.WebDriver": "4.0.0-alpha05"
@@ -92,6 +105,21 @@
     }
   },
   "libraries": {
+    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+      "sha512": "xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
+      "type": "package",
+      "path": "dotnetseleniumextras.waithelpers/3.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+        "dotnetseleniumextras.waithelpers.nuspec",
+        "lib/net35/SeleniumExtras.WaitHelpers.dll",
+        "lib/net40/SeleniumExtras.WaitHelpers.dll",
+        "lib/net45/SeleniumExtras.WaitHelpers.dll",
+        "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -347,11 +375,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\Mailinator.csproj",
+      "projectUniqueName": "C:\\Mailinator_Selenium_Automation\\Mailinator\\Mailinator.csproj",
       "projectName": "Mailinator",
-      "projectPath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\Mailinator.csproj",
+      "projectPath": "C:\\Mailinator_Selenium_Automation\\Mailinator\\Mailinator.csproj",
       "packagesPath": "C:\\Users\\elizabeth.marshall\\.nuget\\packages\\",
-      "outputPath": "C:\\C#_Selenium_Automation_Mailinator\\Mailinator\\obj\\",
+      "outputPath": "C:\\Mailinator_Selenium_Automation\\Mailinator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\elizabeth.marshall\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -367,8 +395,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\C#_Selenium_Automation_Mailinator\\Framework\\Framework.csproj": {
-              "projectPath": "C:\\C#_Selenium_Automation_Mailinator\\Framework\\Framework.csproj"
+            "C:\\Mailinator_Selenium_Automation\\Framework\\Framework.csproj": {
+              "projectPath": "C:\\Mailinator_Selenium_Automation\\Framework\\Framework.csproj"
             }
           }
         }

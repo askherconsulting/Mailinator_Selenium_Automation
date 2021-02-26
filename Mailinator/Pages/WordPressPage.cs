@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Mailinator.Pages
@@ -9,9 +10,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly WordPressPageMap Map;
 
-        public WordPressPage(IWebDriver driver) : base(driver)
+        public WordPressPage()
         {
-            Map = new WordPressPageMap(driver);
+            Map = new WordPressPageMap();
         }
 
         public WordPressPage ScrollToBottom(IWebDriver driver)
@@ -34,15 +35,8 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class WordPressPageMap
     {
-        IWebDriver _driver;
-
-        public WordPressPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-
 
  
-        public IWebElement RegisterLink => _driver.FindElement(By.PartialLinkText("Register"));
+        public IWebElement RegisterLink => Driver.FindElement(By.PartialLinkText("Register"));
     }
 }

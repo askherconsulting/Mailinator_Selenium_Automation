@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Mailinator.Pages
@@ -9,9 +10,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly WordPressAdminPageMap Map;
 
-        public WordPressAdminPage(IWebDriver driver) : base(driver)
+        public WordPressAdminPage()
         {
-            Map = new WordPressAdminPageMap(driver);
+            Map = new WordPressAdminPageMap();
         }
 
         public WordPressAdminPage clickResetPasswordButton(IWebDriver driver)
@@ -25,15 +26,9 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class WordPressAdminPageMap
     {
-        IWebDriver _driver;
 
-        public WordPressAdminPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
+        public IWebElement button => Driver.FindElement(By.Id("wp-submit"));
 
-        public IWebElement button => _driver.FindElement(By.Id("wp-submit"));
-
-        public IWebElement passStrengthResult => _driver.FindElement(By.XPath("//*[@id='pass-strength-result'][text()='Strong']"));
+        public IWebElement passStrengthResult => Driver.FindElement(By.XPath("//*[@id='pass-strength-result'][text()='Strong']"));
     }
 }

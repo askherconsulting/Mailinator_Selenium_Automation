@@ -1,4 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using System.Threading;
+using System.ComponentModel.Design;
+using Framework.Selenium;
+using OpenQA.Selenium;
 
 namespace Mailinator.Pages
 {
@@ -8,9 +11,9 @@ namespace Mailinator.Pages
         //this class does things with the mapped elements listed below
         public readonly RegisterPageMap Map;
 
-        public RegisterPage(IWebDriver driver) : base(driver)
+        public RegisterPage() 
         {
-            Map = new RegisterPageMap(driver);
+            Map = new RegisterPageMap();
         }
 
 
@@ -27,6 +30,7 @@ namespace Mailinator.Pages
            Map.Username.SendKeys(Email);
            Map.Password.SendKeys(Password);
            Map.Button.Click();
+           Thread.Sleep(2000);
            return this;
        }
 
@@ -35,18 +39,12 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class RegisterPageMap
     {
-        IWebDriver _driver;
-
-        public RegisterPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
  
-        public IWebElement Button => _driver.FindElement(By.Id("wp-submit"));
+        public IWebElement Button => Driver.FindElement(By.Id("wp-submit"));
 
-        public IWebElement Username => _driver.FindElement(By.Id("user_login"));
+        public IWebElement Username => Driver.FindElement(By.Id("user_login"));
 
-        public IWebElement Email => _driver.FindElement(By.Id("user_email"));
-        public IWebElement Password => _driver.FindElement(By.Id("user_pass"));
+        public IWebElement Email => Driver.FindElement(By.Id("user_email"));
+        public IWebElement Password => Driver.FindElement(By.Id("user_pass"));
     }
 }

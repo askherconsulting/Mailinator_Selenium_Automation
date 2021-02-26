@@ -9,9 +9,9 @@ namespace Mailinator.Pages
     {
         public readonly HeaderNav HeaderNav;
 
-        public PageBase(IWebDriver driver)
+        public PageBase()
         {
-            HeaderNav = new HeaderNav(driver);
+            HeaderNav = new HeaderNav();
         }
     }
 }
