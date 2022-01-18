@@ -33,7 +33,7 @@ namespace Config.Base
            public string generateUniquePrivateMailinatorEmailSuffix(IWebDriver driver)
        {          
            
-           string randomMailinatorPrivateEmailSuffix = "@bethtest.testinator.com";
+           string randomMailinatorPrivateEmailSuffix = "@yourprivatemailinatordomain.com";
            Console.WriteLine("the unique email suffix used for this test is " + randomMailinatorPrivateEmailSuffix);
            return randomMailinatorPrivateEmailSuffix;
        }
