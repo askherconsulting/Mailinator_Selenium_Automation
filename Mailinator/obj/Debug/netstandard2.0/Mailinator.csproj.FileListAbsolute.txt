@@ -22,3 +22,10 @@ c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator
 c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.csproj.CopyComplete
 c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.dll
 c:\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.pdb
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.dll
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.pdb
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.csproj.AssemblyReference.cache
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.AssemblyInfoInputs.cache
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.AssemblyInfo.cs
+C:\Users\bethm\IdeaProjects\Mailinator_Wordpress_Selenium_Automation\Mailinator_Selenium_Automation\Mailinator\obj\Debug\netstandard2.0\Mailinator.csproj.CoreCompileInputs.cache

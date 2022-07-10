@@ -61,8 +61,11 @@ namespace Mailinator.Pages
         public IWebElement Description => Driver.FindElement(By.Id("description"));
 
         public IWebElement LoginButton => Driver.FindElement(By.PartialLinkText("Login"));
+
+        public IWebElement LogoutButton => Driver.FindElement(By.PartialLinkText("Logout"));
+
         //relative locator example
-        public IWebElement LogoutButton => Driver.FindElement(RelativeBy.WithTagName("li").RightOf(By.ClassName("dropdown")));
+        //public IWebElement LogoutButton => Driver.FindElement(RelativeBy.WithTagName("li").RightOf(By.ClassName("dropdown")));
         /*
         /the same command in Java would be:-
         / public IWebElement LogoutButtonJava => Driver.FindElement(withTagName("li").toRightOf(By.ClassName("dropdown")));

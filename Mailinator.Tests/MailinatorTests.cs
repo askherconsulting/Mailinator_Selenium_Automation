@@ -52,8 +52,8 @@ namespace Mailinator.Tests
         {         
             //go to public inbox
             Driver.Goto("https://www.mailinator.com/v4/public/inboxes.jsp?to=beth123");
-            //switch to new tab
-            Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
+            //switch to new tab - note an upgrade to selenium 4.0 should fix this
+         //   Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //open new URL
             Driver.Goto("https://testproject.io/platform/");
             //go back to first tab
@@ -87,8 +87,8 @@ namespace Mailinator.Tests
             Pages.GetPages.WordPress.ClickRegister(Driver.Current);
             //click sign in button         
             Pages.GetPages.Register.CreateAccount(Username, Email);      
-             //switch to new tab
-            Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
+             //switch to new tab - temp disabled
+          //  Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //go to public Mailinator inbox
             Driver.Goto("https://www.mailinator.com/v4/public/inboxes.jsp?to=" + Email);
             //open email
@@ -140,8 +140,8 @@ namespace Mailinator.Tests
             Driver.Goto("https://timelesstales.in/wp-login.php?action=register");
             //click sign in button
             Pages.GetPages.Register.CreateAccount(Username, EmailPrefix);
-            //switch to new tab
-            Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
+            //switch to new tab - temp disabled
+         //   Driver.Current.SwitchTo().NewWindow(WindowType.Tab);
             //go to inbox
             Driver.Goto("https://www.mailinator.com/");   
             Pages.GetPages.Home.clickLoginButton();
