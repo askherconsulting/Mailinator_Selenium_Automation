@@ -13,8 +13,8 @@ namespace Config.Base
 
     public abstract class ConfigBase
     {
-        public string username = "<<insert your Mailinator account email here>>";
-        public string password = "<<insert your Mailinator account password here>>";
+        public string username = "bethmarshall2013@hotmail.co.uk";
+        public string password = "s_UKWqwf3Y@";
 
         
          public string generateUniquePublicMailinatorEmail(IWebDriver driver)

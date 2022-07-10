@@ -11,6 +11,7 @@
           "Mailinator": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit3TestAdapter": "3.16.1",
+          "Selenium.Support": "4.0.0",
           "Selenium.WebDriver.ChromeDriver": "88.0.4324.9600",
           "Selenium.WebDriver.GeckoDriver.Win64": "0.27.0",
           "Selenium.WebDriver.MSEdgeDriver": "86.0.622.38",
@@ -24,9 +25,9 @@
         "dependencies": {
           "Castle.Core": "4.3.1",
           "DotNetSeleniumExtras.PageObjects": "3.11.0",
-          "Newtonsoft.Json": "12.0.2",
-          "Selenium.Support": "3.141.0",
-          "Selenium.WebDriver": "3.141.0",
+          "Newtonsoft.Json": "12.0.3",
+          "Selenium.Support": "4.0.0",
+          "Selenium.WebDriver": "4.0.0",
           "System.Drawing.Common": "4.5.1"
         },
         "runtime": {
@@ -58,7 +59,7 @@
       },
       "DotNetSeleniumExtras.PageObjects/3.11.0": {
         "dependencies": {
-          "Selenium.WebDriver": "3.141.0"
+          "Selenium.WebDriver": "4.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {
@@ -69,7 +70,7 @@
       },
       "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
         "dependencies": {
-          "Selenium.WebDriver": "3.141.0"
+          "Selenium.WebDriver": "4.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
@@ -165,7 +166,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration": "2.2.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {
@@ -370,7 +371,7 @@
       "Microsoft.TestPlatform.TestHost/16.5.0": {
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "16.5.0",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netcoreapp2.1/Microsoft.TestPlatform.CommunicationUtilities.dll": {
@@ -557,11 +558,11 @@
           "Microsoft.NETCore.Platforms": "2.1.2"
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.2.23222"
+            "fileVersion": "12.0.3.23909"
           }
         }
       },
@@ -611,25 +612,25 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "Selenium.Support/3.141.0": {
+      "Selenium.Support/4.0.0": {
         "dependencies": {
-          "Selenium.WebDriver": "3.141.0"
+          "Selenium.WebDriver": "4.0.0"
         },
         "runtime": {
-          "lib/netstandard2.0/WebDriver.Support.dll": {
-            "assemblyVersion": "3.141.0.0",
-            "fileVersion": "3.141.0.0"
+          "lib/net5.0/WebDriver.Support.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
-      "Selenium.WebDriver/3.141.0": {
+      "Selenium.WebDriver/4.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
-          "lib/netstandard2.0/WebDriver.dll": {
-            "assemblyVersion": "3.141.0.0",
-            "fileVersion": "3.141.0.0"
+          "lib/net5.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -1203,9 +1204,9 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.16.1",
-          "Newtonsoft.Json": "12.0.2",
-          "Selenium.Support": "3.141.0",
-          "Selenium.WebDriver": "3.141.0",
+          "Newtonsoft.Json": "12.0.3",
+          "Selenium.Support": "4.0.0",
+          "Selenium.WebDriver": "4.0.0",
           "Selenium.WebDriver.ChromeDriver": "88.0.4324.9600",
           "Selenium.WebDriver.GeckoDriver.Win64": "0.27.0",
           "Selenium.WebDriver.MSEdgeDriver": "86.0.622.38",
@@ -1441,12 +1442,12 @@
       "path": "netstandard.library/2.0.0",
       "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.2": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
-      "path": "newtonsoft.json/12.0.2",
-      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "NuGet.Frameworks/5.0.0": {
       "type": "package",
@@ -1483,19 +1484,19 @@
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
-    "Selenium.Support/3.141.0": {
+    "Selenium.Support/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
-      "path": "selenium.support/3.141.0",
-      "hashPath": "selenium.support.3.141.0.nupkg.sha512"
+      "sha512": "sha512-YuCXXY2H5Vco1LgZPLo1MnAfLNs1BSMdaLrCYa3rlrDNQC2LBTiUQLOrh/hCsPzoQWnFHOsiqEe5hnX8HJ/ECw==",
+      "path": "selenium.support/4.0.0",
+      "hashPath": "selenium.support.4.0.0.nupkg.sha512"
     },
-    "Selenium.WebDriver/3.141.0": {
+    "Selenium.WebDriver/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wPqzXO3f79DzqauTZSzLMKiaBCN0Z2Mv7KvWP+hnV6EL88zh/pJJnFtdIR1X5wa3hsTOpF/bBJs45rz7kArsiA==",
-      "path": "selenium.webdriver/3.141.0",
-      "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
+      "sha512": "sha512-9v3Dfq/y2j0QMNu0X6YsnKTPstR2rhgbmO9yV/WWoQFBAmPN8yLHoSX6S9gdDUjQMfYJ9gaNFCHX2ZpUo4mQQA==",
+      "path": "selenium.webdriver/4.0.0",
+      "hashPath": "selenium.webdriver.4.0.0.nupkg.sha512"
     },
     "Selenium.WebDriver.ChromeDriver/88.0.4324.9600": {
       "type": "package",
