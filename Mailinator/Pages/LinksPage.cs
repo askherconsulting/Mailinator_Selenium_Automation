@@ -27,7 +27,7 @@ namespace Mailinator.Pages
 
         public IWebElement email => Driver.FindElement(By.XPath("//*[contains(text(),subject)]"));
 
-        public IWebElement links => Driver.FindElement(By.Id("clicklinks"));
+        public IWebElement links => Driver.FindElement(By.Id("pills-links-tab"));
 
     }
 }

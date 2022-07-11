@@ -22,6 +22,12 @@ namespace Mailinator.Pages
             return this;
         }
 
+        public InboxPage clickLoginButton()
+       {
+           Map.LoginButton.Click();
+           return this;
+       }
+
         public InboxPage selectInbox(string inboxName)
         {
             Map.inboxName.Clear();
@@ -36,6 +42,8 @@ namespace Mailinator.Pages
     {
  
         public IWebElement emailWP => Driver.FindElement(By.XPath("//*[contains(text(),'WordPress')]"));
+
+        public IWebElement LoginButton => Driver.FindElement(By.PartialLinkText("Login"));
 
         public IWebElement emailSW => Driver.FindElement(By.XPath("//*[contains(text(),'TEST - Alert')]"));
 

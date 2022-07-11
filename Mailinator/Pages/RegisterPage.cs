@@ -17,11 +17,18 @@ namespace Mailinator.Pages
         }
 
 
-         public RegisterPage CreateAccount(string Username, string Email)
+         public RegisterPage CreateAccount(string Email, string Username, string Password)
        {   
-           Map.Username.SendKeys(Username);
            Map.Email.SendKeys(Email);
+           Map.Username.SendKeys(Username);
+           Map.Password.SendKeys(Password);
            Map.Button.Click();
+           return this;
+       }
+
+         public RegisterPage AcceptCookies()
+       {   
+           Map.CookieBanner.Click();
            return this;
        }
 
@@ -39,12 +46,14 @@ namespace Mailinator.Pages
     //this class maps all the elements you need on this page
     public class RegisterPageMap
     {
- 
-        public IWebElement Button => Driver.FindElement(By.Id("wp-submit"));
+        //todo - use a better element (note no ID present, spaces in classname so won't pick up by  default)
+        public IWebElement Button => Driver.FindElement(By.CssSelector("#primary > div > div.signup__steps > div > div > div > div.step-wrapper__content > div.signup-form.is-horizontal > div.card.logged-out-form > form > div.card.logged-out-form__footer.is-blended > button"));
 
-        public IWebElement Username => Driver.FindElement(By.Id("user_login"));
+        public IWebElement Username => Driver.FindElement(By.Id("username"));
 
-        public IWebElement Email => Driver.FindElement(By.Id("user_email"));
-        public IWebElement Password => Driver.FindElement(By.Id("user_pass"));
+        public IWebElement Email => Driver.FindElement(By.Id("email"));
+
+        public IWebElement CookieBanner => Driver.FindElement(By.CssSelector("#wpcom > div > div.card.gdpr-banner.is-compact > div.gdpr-banner__buttons > button"));
+        public IWebElement Password => Driver.FindElement(By.Id("password"));
     }
 }

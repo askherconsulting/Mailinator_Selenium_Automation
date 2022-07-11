@@ -1,4 +1,5 @@
-﻿using Framework.Selenium;
+﻿using System.Threading;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Mailinator.Pages
@@ -41,7 +42,7 @@ namespace Mailinator.Pages
 
         public IWebElement viewEventButton => Driver.FindElement(By.PartialLinkText("View event"));
 
-         public IWebElement textLink => Driver.FindElement(By.XPath("//*[contains(text(),'login=')]"));
+         public IWebElement textLink => Driver.FindElement(By.XPath("//*[contains(text(),'Confirm Now')]"));
         
 
     }

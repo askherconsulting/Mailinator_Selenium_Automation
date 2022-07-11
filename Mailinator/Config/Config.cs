@@ -23,9 +23,9 @@ namespace Config.Base
            Random rand = new Random();
 
            string emailPrefix = "Beth";
-           int emailSuffix = rand.Next(1000, 9999);
+           int emailSuffix = rand.Next(1000, 99999);
            
-           string randomMailinatorPublicEmail = emailPrefix + emailSuffix + "@mailinator.com";
+           string randomMailinatorPublicEmail = emailPrefix + emailSuffix + "@testinator.com";
            Console.WriteLine("the unique email used for this test is " + randomMailinatorPublicEmail);
            return randomMailinatorPublicEmail;
        }
@@ -33,7 +33,7 @@ namespace Config.Base
            public string generateUniquePrivateMailinatorEmailSuffix(IWebDriver driver)
        {          
            
-           string randomMailinatorPrivateEmailSuffix = "@yourprivatemailinatordomain.com";
+           string randomMailinatorPrivateEmailSuffix = "@bethstestaccount.testinator.com";
            Console.WriteLine("the unique email suffix used for this test is " + randomMailinatorPrivateEmailSuffix);
            return randomMailinatorPrivateEmailSuffix;
        }
@@ -44,8 +44,8 @@ namespace Config.Base
            Random rand = new Random();
 
            string emailPrefix = "Beth";
-           int emailNumber = rand.Next(1000, 9999);
-           string emailSuffix = "@bethtest.testinator.com";
+           int emailNumber = rand.Next(1000, 99999);
+           string emailSuffix = "@bethstestaccount.testinator.com";
            
            string randomMailinatorPrivateEmailPrefix = emailPrefix + emailNumber + emailSuffix ;
            Console.WriteLine("the unique email prefix used for this test is " + randomMailinatorPrivateEmailPrefix);

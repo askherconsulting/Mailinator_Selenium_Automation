@@ -21,6 +21,13 @@ namespace Mailinator.Pages
            return this;
        }
 
+       public WordPressAdminPage removeVerifiedEmailNotification(IWebDriver driver)
+       {
+           Map.siteText.Click();
+           return this;
+       }
+
+
     }
 
     //this class maps all the elements you need on this page
@@ -28,6 +35,8 @@ namespace Mailinator.Pages
     {
 
         public IWebElement button => Driver.FindElement(By.Id("wp-submit"));
+
+        public IWebElement siteText => Driver.FindElement(By.ClassName("notice__dismiss"));
 
         public IWebElement passStrengthResult => Driver.FindElement(By.XPath("//*[@id='pass-strength-result'][text()='Strong']"));
     }

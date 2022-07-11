@@ -60,7 +60,7 @@ namespace Mailinator.Pages
 
         public IWebElement Description => Driver.FindElement(By.Id("description"));
 
-        public IWebElement LoginButton => Driver.FindElement(By.PartialLinkText("Login"));
+        public IWebElement LoginButton => Driver.FindElement(By.PartialLinkText("LOGIN"));
 
         public IWebElement LogoutButton => Driver.FindElement(By.PartialLinkText("Logout"));
 
