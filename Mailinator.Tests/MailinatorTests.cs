@@ -15,7 +15,7 @@ namespace Mailinator.Tests
     {
 
         [Test, Category("e2e")]
-        public void private_inbox_Click_Email_Link()
+        public void private_inbox_login_view_Email()
         {         
             //Login to mailinator and open private inbox  
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth123889");
@@ -25,25 +25,9 @@ namespace Mailinator.Tests
             Driver.Goto("https://www.mailinator.com/v4/private/inboxes.jsp?to=beth123889");     
             Pages.GetPages.Inbox.selectInbox("beth123889");           
             Driver.Wait.Until(drvr => Pages.GetPages.Inbox.Map.emailWP.Displayed);
-            Pages.GetPages.Inbox.openEmail(Pages.GetPages.Inbox.Map.emailWP);
-            // Now switch to the email body iframe
-             //note - the frame will either be html_msg_body or texthtml_msg_body 
-             //so use this try catch block to try both
-            try {                                                                                                                    
-                Driver.Current.SwitchTo().Frame("html_msg_body");
-                Driver.Wait.Until(drvr => Pages.GetPages.Message.Map.textLink.Displayed);}
-            catch (WebDriverException ) {
-                Driver.Current.SwitchTo().DefaultContent();
-                Driver.Current.SwitchTo().Frame("texthtml_msg_body");
-                Driver.Wait.Until(drvr => Pages.GetPages.Message.Map.textLink.Displayed);
-                }
-            // Click on the email link 
-            Pages.GetPages.Message.clickTextLink(Driver.Current);
-            // If you need to go back to the menu, don't forget to switch back:
-            Driver.Current.SwitchTo().DefaultContent();
             //check a new tab has been opened
-            Driver.Wait.Until(drvr => Driver.Current.WindowHandles.Count == 2);
-            Assert.AreEqual(2, Driver.Current.WindowHandles.Count);
+            //Driver.Wait.Until(drvr => Driver.Current.WindowHandles.Count == 2);
+            //Assert.AreEqual(2, Driver.Current.WindowHandles.Count);
         }
 
 
